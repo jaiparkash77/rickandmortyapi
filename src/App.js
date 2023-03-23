@@ -9,7 +9,7 @@ function App() {
   const [searchfield, setSearchfield] = useState('');
   const [count, setCount] = useState(1);
   let url = "https://rickandmortyapi.com/api/character";
-  
+
   useEffect(()=>{
     const getData = async ()=>{
       axios.get(url).then(data=>setCharacters(data.data.results)).catch(error=>console.log(error))
@@ -38,7 +38,6 @@ function App() {
   }
   const PrePage = async()=>{
     if(count===1){
-      getData();
       return;
     }
     
