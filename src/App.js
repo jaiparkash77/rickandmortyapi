@@ -52,8 +52,8 @@ function App() {
     <div className="App">
       <SearchBox searchChange={onSearchChange}/>
       <Characters characters={characters} searchfield={searchfield} />
-      <button onClick={PrePage}>Pre</button>
-      <button onClick={NextPage}>Next</button>
+      <button className='b--green br4 bg-light-green ma3 pa3-ns' onClick={PrePage}>Pre</button>
+      <button className='b--green br4 bg-light-green ma3 pa3-ns' onClick={NextPage}>Next</button>
     </div>
   )
 }
