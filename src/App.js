@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -25,7 +24,7 @@ function App() {
   const NextPage = async()=>{
     
     console.log(count)
-    if(count==42){
+    if(count===42){
       return;
     }
     
@@ -37,7 +36,7 @@ function App() {
     setCharacters(data);
   }
   const PrePage = async()=>{
-    if(count==1){
+    if(count===1){
       getData();
       return;
     }
