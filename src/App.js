@@ -8,11 +8,10 @@ function App() {
   const [characters,setCharacters] = useState([]);
   const [searchfield, setSearchfield] = useState('');
   const [count, setCount] = useState(1);
-  let url = "https://rickandmortyapi.com/api/character";
 
   useEffect(()=>{
     const getData = async ()=>{
-      axios.get(url).then(data=>setCharacters(data.data.results)).catch(error=>console.log(error))
+      axios.get("https://rickandmortyapi.com/api/character").then(data=>setCharacters(data.data.results)).catch(error=>console.log(error))
     };
     getData();
   },[])
